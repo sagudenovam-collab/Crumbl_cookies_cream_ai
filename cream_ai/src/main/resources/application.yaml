@@ -1,3 +1,29 @@
 spring:
   application:
     name: cream_ai
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 25MB
+
+server:
+  port: ${PORT:8080}
+
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  model: ${GEMINI_MODEL:gemini-2.0-flash}
+  base-url: ${GEMINI_BASE_URL:https://generativelanguage.googleapis.com/v1beta}
+  max-retries: 3
+  timeout-millis: 60000
+  temperature: 0.2
+
+app:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000}
+  storage:
+    temp-dir: ${APP_TEMP_DIR:}
+
+logging:
+  level:
+    root: INFO
+    com.crumble_cookies.cream_ai: INFO

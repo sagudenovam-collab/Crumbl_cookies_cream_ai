@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/types.ts","./src/api/client.ts","./src/components/Dashboard.tsx","./src/components/ExportBar.tsx","./src/components/Header.tsx","./src/components/ProgressView.tsx","./src/components/RequirementsList.tsx","./src/components/SetAnalysisView.tsx","./src/components/UploadPanel.tsx"],"version":"5.9.3"}
