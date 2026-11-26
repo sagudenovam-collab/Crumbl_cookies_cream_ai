@@ -31,3 +31,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment ###
+.env
+reports/*.md
+reports/*.json
+!reports/.gitkeep
