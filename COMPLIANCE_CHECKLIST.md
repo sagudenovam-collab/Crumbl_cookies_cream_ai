@@ -134,8 +134,13 @@ End-to-end тест полного процесса — ✅ (`AnalysisOrchestrat
 репозиторий, не имеет сетевого доступа к Maven Central, поэтому `mvn test`
 не мог быть запущен локально в этой среде. Тесты запускаются и проверяются
 через GitHub Actions CI (`.github/workflows/ci.yml`) сразу после push в
-репозиторий. Результат конкретного прогона CI — в истории Actions репозитория
-(ссылка будет указана в финальном сообщении после push).
+репозиторий.
+
+**Фактический результат прогона CI** (ветка `feature/requirements-intelligence-agent`,
+коммит `203743f`): оба job'а — Backend (compile → test → package) и Frontend
+(npm ci → tsc -b → vite build) — завершились со статусом `success`, включая
+шаг `mvn test`, то есть все автоматические тесты реально прошли.
+Запуск: https://github.com/sagudenovam-collab/Crumbl_cookies_cream_ai/actions/runs/45786032957
 
 ## 11. Демонстрация для жюри — ✅
 
