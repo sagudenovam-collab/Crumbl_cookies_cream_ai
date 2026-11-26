@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class GeminiProperties {
 
     private String apiKey;
-    private String model = "gemini-2.0-flash";
+    private String model = "gemini-3.8-flash";
     private String baseUrl = "https://generativelanguage.googleapis.com/v1beta";
     private int maxRetries = 3;
     private long timeoutMillis = 60_000;
