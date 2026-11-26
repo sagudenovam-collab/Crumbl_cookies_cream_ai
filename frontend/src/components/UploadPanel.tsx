@@ -6,6 +6,7 @@ interface Props {
 }
 
 const ACCEPTED = [".pdf", ".md", ".markdown", ".docx", ".txt"];
+const STATIC_DEMO = import.meta.env.VITE_STATIC_DEMO === "true";
 
 export default function UploadPanel({ onFileSelected, error }: Props) {
   const [dragActive, setDragActive] = useState(false);
@@ -29,6 +30,14 @@ export default function UploadPanel({ onFileSelected, error }: Props) {
         перед началом разработки. Загрузите документ — агент найдёт противоречия,
         неоднозначности, неполноту и дублирование, а также рассчитает Requirement Health Score.
       </p>
+
+      {STATIC_DEMO && (
+        <div className="mx-auto mt-6 max-w-xl rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-left text-sm text-amber-800">
+          <b>Это статическая витрина на GitHub Pages.</b> Backend здесь не запущен, поэтому
+          загрузка файла и анализ работать не будут. Чтобы попробовать агент целиком —
+          запустите проект локально (см. README) или в GitHub Codespaces.
+        </div>
+      )}
 
       <div
         onDragOver={(e) => {
